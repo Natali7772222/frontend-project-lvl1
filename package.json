@@ -1,5 +1,5 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Natali7772222/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Natali7772222/frontend-project-lvl1/actions)",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "git+https://github.com/Natali7772222/frontend-project-lvl1.git"
   },
   "keywords": [],
@@ -17,10 +17,10 @@
     "url": "https://github.com/Natali7772222/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/Natali7772222/frontend-project-lvl1#readme",
-  "dependencies": {
-    "prettier": "^2.7.1"
+  "bin": {
+    "code": "brain-games.js",
+    "brain-games": "bin/brain-games.js"
   },
-  "devDependencies": {
-    "eslint": "^8.21.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
