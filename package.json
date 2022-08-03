@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
-    "type": "module",
     "url": "git+https://github.com/Natali7772222/frontend-project-lvl1.git"
   },
   "keywords": [],
@@ -21,6 +21,8 @@
     "code": "brain-games.js",
     "brain-games": "bin/brain-games.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
   "devDependencies": {}
 }
