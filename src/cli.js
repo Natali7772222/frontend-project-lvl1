@@ -1,5 +1,19 @@
-let readlineSync = require('readline-sync');
+import {
+    question
+} from "readline-sync";
 
-module.exports = {
-    readlineSync: readlineSync,
+import {
+    gameResult
+} from "../bin/brain-even.js"
+
+function greetings() {
+
+    console.log('Welcome to the Brain Games!');
+    const name = question(`May I have your name? `)
+    let newName = name[0].toUpperCase() + name.slice(1);
+    console.log(`Hello, ${newName} !`);
+    gameResult()
+}
+export {
+    greetings
 }
