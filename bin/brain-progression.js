@@ -2,11 +2,11 @@
 
 import {
     greetings
-
 } from '../src/index.js';
 import {
-    calc
+    progression
 } from './brain-even.js';
 
+
 greetings()
-calc()
+progression()

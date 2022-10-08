@@ -74,7 +74,7 @@ const calc = () => {
 }
 const gcd = () => {
     if (count > 3) {
-       return console.log(`Congratulation! ${newName}`)
+        return console.log(`Congratulation! ${newName}`)
     }
     let num1 = randomNum();
     let num2 = randomNum();
@@ -98,27 +98,45 @@ const gcd = () => {
         console.log(`${answer} is wrong answer ;(. Correct answer was.${res}`);
     }
 }
-// Find the greatest common divisor of given numbers.
-// Question: 25 50
-// Your answer: 25
-// Correct!
-// Question: 100 52
-// Your answer: 4
-// Correct!
-// Question: 3 9
-// Your answer: 3
-// Correct!
-// Congratulations, Sam!
-// В случае, если пользователь даст неверный ответ, необходимо вывести:
 
-// Question: 25 50
-// Your answer: 1
-// '1' is wrong answer ;(. Correct answer was '25'.
-// Let's try again, Sam!
+
+
+
+
+
+const progression = () => {
+    let arr = [];
+    let a = randomNum();
+    let num = 1;
+
+    for (let i = a; i <= a * 10; i = i + a) {
+        arr.push(i)
+
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (i === arr.length / 2) {
+            num = arr[i]
+            arr[i] = '..'
+        }
+
+    }
+    console.log(`What number is missing in the progression?`)
+    console.log(arr.join(' '));
+    let answer = question()
+    if (answer = num) {
+        console.log(`Correct!`)
+        progression()
+    } else {
+        console.log(` ${answer} is wrong answer ;(. Correct answer was ${num}.
+            Let's try again, Sam!`)
+    }
+}
+progression()
 
 
 export {
     addEven,
     calc,
-    gcd
+    gcd,
+    progression
 }
