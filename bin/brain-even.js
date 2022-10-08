@@ -1,84 +1,124 @@
+#!/usr/bin/env node
+
 import {
     question
 } from "readline-sync";
 import {
-    greetings
-} from '../src/cli.js';
-//greetings()
-const gameResult = () => {
+    newName
+} from '../src/index.js'
+
+const randomNum = () => {
+    return Math.ceil(Math.random() * 100);
+}
+const ceckCount = () => {
+
+    //  return `Congratulations!, ${newName}`
+
+}
+
+const addEven = () => {
     console.log(`Answer "yes" if the number is even, otherwise answer "no".`)
 
-    let count = 0;
+    let a = 0
     const answerOnQuestion = () => {
-        count++;
-        console.log(count)
-        if (count > 3) {
-            return console.log(`Congratulations, ${newName}!`)
-
-        };
-        const randomNum = Math.ceil(Math.random() * 1000)
-        console.log(`Question: ${randomNum} `)
-        const quest = question('Your answer: ').toLowerCase()
-        if (randomNum % 2 === 0 && quest === 'yes' || randomNum % 2 !== 0 && quest === 'no') {
-            console.log(`Correct!${newName}`)
-            answerOnQuestion()
+        if (a > 2) {
+            console.log(`Congratulations! ${newName}`)
         } else {
-            console.log(`This is not the correct answer ${newName}!`)
+
+            let num = randomNum()
+            console.log(`: Question: ${num} `)
+            const answer = question('Your answer: ').toLowerCase()
+
+            if (num % 2 === 0 && answer === 'yes' || num % 2 !== 0 && answer === 'no') {
+                console.log(`Correct! ${newName}`)
+                a = a + 1;
+                answerOnQuestion()
+
+            } else {
+                console.log(`${newName}  This is not the correct answer!`)
+            }
         }
     }
     answerOnQuestion()
-
 }
+
+
+
+
+
+let count = 1;
+const calc = () => {
+    let num1 = randomNum();
+    let num2 = +randomNum();
+    let res = num1 + num2;
+    if (count < 3) {
+        console.log(`\nWhat is the result of the expression?
+        ${num1} + ${num2}`)
+
+        const quest = question()
+
+        if (quest == res) {
+            console.log(`Correct!`)
+            count += 1
+            calc()
+        } else {
+            console.log(`${newName} is wrong answer ;(. Correct answer was ${res}.
+
+        Let's try again!
+        
+        `)
+        }
+    } else {
+        console.log(`Congratulation! ${newName}`);
+    }
+}
+const gcd = () => {
+    if (count > 3) {
+       return console.log(`Congratulation! ${newName}`)
+    }
+    let num1 = randomNum();
+    let num2 = randomNum();
+    let res;
+    if (num1 > num2) {
+        res = num1
+    } else if (num2 > num1) {
+        res = num2
+    } else {
+        res = '='
+    }
+    console.log(`Find the greatest common divisor of given numbers.`)
+    console.log(`Question: ${num1}  ${num2}`);
+    let answer = question(`Your answer: `).toLowerCase()
+
+    if (res = answer) {
+        console.log(`Correct!`);
+        count++
+        gcd()
+    } else {
+        console.log(`${answer} is wrong answer ;(. Correct answer was.${res}`);
+    }
+}
+// Find the greatest common divisor of given numbers.
+// Question: 25 50
+// Your answer: 25
+// Correct!
+// Question: 100 52
+// Your answer: 4
+// Correct!
+// Question: 3 9
+// Your answer: 3
+// Correct!
+// Congratulations, Sam!
+// В случае, если пользователь даст неверный ответ, необходимо вывести:
+
+// Question: 25 50
+// Your answer: 1
+// '1' is wrong answer ;(. Correct answer was '25'.
+// Let's try again, Sam!
+
+
 export {
-    gameResult
+    addEven,
+    calc,
+    gcd
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// import {
-//     question
-//   } from "readline-sync";
-//   const greetings = () => {
-//     console.log(`Welcome to the Brain Games!`);
-//     const name = question(`May I have your name? `)
-//     let newName = name[0].toUpperCase() + name.slice(1);
-//     console.log(`Hello, ${newName} !`);
-//     console.log(`Answer "yes" if the number is even, otherwise answer "no".`)
-
-//     let count = 0;
-//     const answerOnQuestion = () => {
-//       count++;
-//       console.log(count)
-//       if (count > 3) {
-//       return console.log(`Congratulations, ${newName}!`)
-
-//       };
-//       const randomNum = Math.ceil(Math.random() * 1000)
-//       console.log(`Question: ${randomNum} `)
-//       const quest = question('Your answer: ').toLowerCase()
-//       if (randomNum % 2 === 0 && quest === 'yes' || randomNum % 2 !== 0 && quest === 'no') {
-//         console.log(`Correct!${newName}`)
-//         answerOnQuestion()
-//       } else {
-//         console.log(`This is not the correct answer ${newName}!`)
-//       }
-//     }
-//     answerOnQuestion()
-
-
-
-
-//   }
-
-//   export {
-//     greetings
-//   };

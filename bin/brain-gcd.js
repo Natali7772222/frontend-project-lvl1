@@ -4,9 +4,9 @@ import {
     greetings
 } from '../src/index.js';
 import {
-    addEven
+    gcd
 } from './brain-even.js';
 
 
 greetings()
-addEven()
+gcd()
