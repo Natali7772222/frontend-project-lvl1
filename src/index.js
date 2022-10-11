@@ -1,16 +1,45 @@
 import {
     question
 } from "readline-sync";
-export let newName;
+import {
+    correctAnswer,
+    runGame
+} from "./games/calc.js"
+export let name;
 const greetings = () => {
     console.log('Welcome to the Brain Games!');
-    const name = question(`May I have your name? `)
-    newName = name[0].toUpperCase() + name.slice(1);
-    console.log(`Hello, ${newName} !`);
+    name = question(`May I have your name? `)
+    console.log(`Hello, ${name} !`);
 
 }
 
+let count = 1;
+const responseCheck = () => {
+    
+    const userAnswer = question()
+    if (count >= 2) {
+        console.log(`Congratulations, ${name}`)
+    } else {
+
+        if (userAnswer == correctAnswer) {
+
+            console.log(`Correct!`)
+            count = count + 1;
+            runGame()
+        } else if (userAnswer !== correctAnswer) {
+            console.log(`${userAnswer}, is wrong answer ;(. Correct answer was ${correctAnswer}.
+    
+                Let's try again!
+    
+                `)
+
+        }
+    }
+}
+
+
 export {
-    greetings
+    greetings,
+    responseCheck
 
 }
