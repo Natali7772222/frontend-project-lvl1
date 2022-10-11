@@ -5,6 +5,7 @@ import {
     correctAnswer,
     runGame
 } from "./games/calc.js"
+
 export let name;
 const greetings = () => {
     console.log('Welcome to the Brain Games!');
@@ -12,13 +13,15 @@ const greetings = () => {
     console.log(`Hello, ${name} !`);
 
 }
-
+const randomNum = () => {
+    return Math.ceil(Math.random() * 10);
+}
 let count = 1;
 const responseCheck = () => {
-    
+
     const userAnswer = question()
-    if (count >= 2) {
-        console.log(`Congratulations, ${name}`)
+    if (count >= 3) {
+        console.log(`Congratulations, ${name}!`)
     } else {
 
         if (userAnswer == correctAnswer) {
@@ -40,6 +43,7 @@ const responseCheck = () => {
 
 export {
     greetings,
-    responseCheck
+    responseCheck,
+    randomNum
 
 }

@@ -1,14 +1,13 @@
 import {
     greetings,
-    responseCheck
+    responseCheck,
+    randomNum
 } from "../index.js";
 
+
 greetings()
-const randomNum = () => {
-    return Math.ceil(Math.random() * 10);
-}
-export let correctAnswer;
-export const runGame = () => {
+let correctAnswer;
+const runGame = () => {
     let num1 = randomNum();
     let num2 = randomNum();
     correctAnswer = num1 + num2;
@@ -16,4 +15,9 @@ export const runGame = () => {
     console.log(`\nWhat is the result of the expression? ${num1} + ${num2}`)
     responseCheck()
 
+}
+
+export{
+    correctAnswer,
+    runGame 
 }
