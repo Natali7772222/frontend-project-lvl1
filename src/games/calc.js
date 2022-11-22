@@ -18,7 +18,7 @@ const runGame = () => {
 
 }
 
-export{
+export {
     correctAnswer,
-    runGame 
+    runGame
 }
