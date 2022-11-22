@@ -13,12 +13,11 @@ const runGame = () => {
     let num2 = randomNum();
     correctAnswer = num1 + num2;
     console.log(`\nWhat is the result of the expression? ${num1} + ${num2}`)
-    responseCheck()
+    responseCheck(correctAnswer)
 
 
 }
 
-export{
-    correctAnswer,
-    runGame 
+export {
+    runGame
 }
