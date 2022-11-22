@@ -3,7 +3,10 @@
 import {
     runGame
 } from "../src/games/even.js";
-
+import {
+    greetings
+} from "../src/index.js";
+greetings()
 runGame()
 // const addEven = () => {
 //     console.log(`Answer "yes" if the number is even, otherwise answer "no".`)

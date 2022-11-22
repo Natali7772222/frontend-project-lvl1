@@ -1,13 +1,14 @@
 import {
     question
 } from "readline-sync";
-import {
-    correctAnswer,
-    runGame
-} from "./games/calc.js"
 
-export let name;
-const greetings = () => {
+import  { runGame} from 
+"./games/calc.js"
+"./games/even.js"
+
+let name;
+
+const greetings=()=>{
     console.log('Welcome to the Brain Games!');
     name = question(`May I have your name? `)
     console.log(`Hello, ${name} !`);
@@ -24,7 +25,7 @@ const responseCheck = () => {
         console.log(`Congratulations, ${name}!`)
     } else {
 
-        if (userAnswer == correctAnswer) {
+        if (userAnswer === correctAnswer) {
 
             console.log(`Correct!`)
             count = count + 1;
@@ -41,9 +42,10 @@ const responseCheck = () => {
 }
 
 
-export {
+export{
     greetings,
     responseCheck,
-    randomNum
+    randomNum,
+    name
 
 }
