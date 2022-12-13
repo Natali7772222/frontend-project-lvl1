@@ -2,7 +2,7 @@ import {
     question
 } from "readline-sync";
 
-import * as runGame from './games/calc.js'
+import {default as runGame,correctAnswer} from './games/calc.js'
 "./games/even.js"
 
 let name;
