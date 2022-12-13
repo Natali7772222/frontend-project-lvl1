@@ -2,13 +2,12 @@ import {
     question
 } from "readline-sync";
 
-import  { runGame,correctAnswer} from 
-"./games/calc.js"
+import * as runGame from './games/calc.js'
 "./games/even.js"
 
 let name;
 
-const greetings=()=>{
+const greetings = () => {
     console.log('Welcome to the Brain Games!');
     name = question(`May I have your name? `)
     console.log(`Hello, ${name} !`);
@@ -20,27 +19,26 @@ const randomNum = () => {
 let count = 1;
 const responseCheck = () => {
     const userAnswer = question()
-    if (count >= 3) {
-        console.log(`Congratulations, ${name}!`)
-    } else {
-        if (userAnswer == correctAnswer) {
-            
-            console.log(`Correct!`)
-            count = count + 1;
-            runGame()
-        } else if (userAnswer !== correctAnswer) {
-            // console.log(correctAnswer+'консоль')
-            console.log(`${userAnswer}, is wrong answer ;(. Correct answer was ${correctAnswer}.
+    if (userAnswer == runGame.correctAnswer) {
+
+        console.log(`Correct!`)
+        count = count + 1;
+        if (count > 3) {
+            return console.log(`Congratulations, ${name}!`)
+
+        }
+        runGame()
+    } else if (userAnswer !== runGame.correctAnswer) {
+        console.log(`${userAnswer}, is wrong answer ;(. Correct answer was ${runGame.correctAnswer}.
                 
                 Let's try again!
                 
                 `)
-        }
     }
 }
 
 
-export{
+export {
     greetings,
     responseCheck,
     randomNum,
