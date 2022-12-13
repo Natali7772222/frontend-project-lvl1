@@ -2,7 +2,7 @@ import {
     question
 } from "readline-sync";
 
-import  { runGame} from 
+import  { runGame,correctAnswer} from 
 "./games/calc.js"
 "./games/even.js"
 
@@ -19,24 +19,22 @@ const randomNum = () => {
 }
 let count = 1;
 const responseCheck = () => {
-
     const userAnswer = question()
     if (count >= 3) {
         console.log(`Congratulations, ${name}!`)
     } else {
-
-        if (userAnswer === correctAnswer) {
-
+        if (userAnswer == correctAnswer) {
+            
             console.log(`Correct!`)
             count = count + 1;
             runGame()
         } else if (userAnswer !== correctAnswer) {
+            // console.log(correctAnswer+'консоль')
             console.log(`${userAnswer}, is wrong answer ;(. Correct answer was ${correctAnswer}.
-    
+                
                 Let's try again!
-    
+                
                 `)
-
         }
     }
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import {
+    // correctAnswer,
     runGame
 } from "../src/games/even.js";
 import {

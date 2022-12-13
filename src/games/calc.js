@@ -5,7 +5,6 @@ import {
 } from "../index.js";
 
 
-// greetings()
 
 let correctAnswer;
 const runGame = () => {
