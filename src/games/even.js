@@ -1,24 +1,18 @@
-import {
-    responseCheck,
-    randomNum
-} from "../index.js";
+import run from "../index.js";
+import randomNumber from "../helper.js";
 
+const description =`Answer "yes" if the number is even, otherwise answer "no".`
 
-// let correctAnswer;
-const runGame = () =>{
-    console.log(`Answer "yes" if the number is even, otherwise answer "no".`)
-    const num = randomNum()
-    console.log(num)
-    let correctAnswer;
-    num % 2 === 0 ? correctAnswer = 'yes' : correctAnswer = 'no'; 
-   
-    responseCheck()
-
+const isEvenNumber = (num) => {
+    return (num % 2 == 0) ? true : false
 }
-export default runGame 
-// runGame()
+const getQuestionAndAnswer = () => {
+    const question = randomNumber(0, 100);
+    const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
 
-// export {
-//     correctAnswer,
-//     runGame
-// }
+    return [question, correctAnswer];
+};
+
+export default () => {
+    run(description, getQuestionAndAnswer);
+};

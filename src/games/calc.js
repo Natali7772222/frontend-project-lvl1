@@ -1,20 +1,14 @@
-import {
-    responseCheck,
-    randomNum
-} from "../index.js";
-import runGame from "./even.js";
+import run from "../index.js";
+import randomNumber from "../helper.js";
 
-
-
-let correctAnswer;
+const description = `\nWhat is the result of the expression?`
+const getQuestionAndAnswer=()=>{
+    let num1 = randomNumber();
+    let num2 = randomNumber();
+const question=`${num1} + ${num2}`;
+const correctAnswer = num1+num2;
+  return [question, correctAnswer] 
+}
 export default () => {
-    let num1 = randomNum();
-    let num2 = randomNum();
-    correctAnswer = num1 + num2;
-    console.log(`\nWhat is the result of the expression? ${num1} + ${num2}`)
-    responseCheck()
-}
-
-export{
-    correctAnswer
-}
+    run(description, getQuestionAndAnswer);
+};

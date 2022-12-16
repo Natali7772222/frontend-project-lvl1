@@ -1,12 +1,4 @@
 #!/usr/bin/env node
+import progression from '../src/games/progression.js'
 
-import {
-    greetings
-} from '../src/index.js';
-import {
-    progression
-} from './brain-even.js';
-
-
-greetings()
 progression()

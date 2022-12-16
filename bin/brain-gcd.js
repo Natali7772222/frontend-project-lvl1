@@ -1,12 +1,5 @@
 #!/usr/bin/env node
 
-import {
-    greetings
-} from '../src/index.js';
-import {
-    gcd
-} from './brain-even.js';
+import gcd from '../src/games/gcd.js';
 
-
-greetings()
 gcd()

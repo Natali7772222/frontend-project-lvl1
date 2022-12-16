@@ -1,47 +1,32 @@
-import {
-    question
-} from "readline-sync";
+import readlineSync from 'readline-sync';
 
-import {default as runGame,correctAnswer} from './games/calc.js'
-"./games/even.js"
+const run = (description,getQuestionAndAnswer)=>{
+    
+// приветствуем игрока и записываем имя
+console.log('Welcome to the Brain Games!');
+const name = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${name}!`);
+// выводим описание игры
+ console.log(description);
 
-let name;
 
-const greetings = () => {
-    console.log('Welcome to the Brain Games!');
-    name = question(`May I have your name? `)
-    console.log(`Hello, ${name} !`);
+// запускаем цикл раундов
+for (let i = 0; i < 3; i += 1) {
+  // принимаем деструктуризацию вопроса и правильного ответа
+  const [question, correctAnswer] = getQuestionAndAnswer();
+  console.log(`Question: ${question}`);
 
+  // записываем ответ пользователя
+  const userAnswer = readlineSync.question('You answer: ');
+  // проверяем совпадает ли ответ юзера и правильный ответ
+  if (correctAnswer == userAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+    console.log(`Let's try again, ${name}!`);
+    return;
+  }
 }
-const randomNum = () => {
-    return Math.ceil(Math.random() * 10);
+console.log(`Congratulations, ${name}!`);
 }
-let count = 1;
-const responseCheck = () => {
-    const userAnswer = question()
-    if (userAnswer == runGame.correctAnswer) {
-
-        console.log(`Correct!`)
-        count = count + 1;
-        if (count > 3) {
-            return console.log(`Congratulations, ${name}!`)
-
-        }
-        runGame()
-    } else if (userAnswer !== runGame.correctAnswer) {
-        console.log(`${userAnswer}, is wrong answer ;(. Correct answer was ${runGame.correctAnswer}.
-                
-                Let's try again!
-                
-                `)
-    }
-}
-
-
-export {
-    greetings,
-    responseCheck,
-    randomNum,
-    name
-
-}
+export default run
