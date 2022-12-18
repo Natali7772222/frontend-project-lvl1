@@ -12,7 +12,8 @@ const getQuestionAndAnswer = () => {
     //массив случайной длины от 5 до 10
     let arr = Array(randomMinAndMax(5, 10)).fill(1)
     //изменненый массив 
-    let resArr = []
+    let resArr = [];
+    
     for (let i = 1; i < arr.length; i++) {
         resArr.push(i * num)
     }

@@ -14,10 +14,10 @@ brain-progression:
 	node bin/brain-progression.js
 lint:
 	npx eslint .
-rules:
-  no-console: 0
-  import/extensions: # FIXME: remove when rule will be adjusted for new nodejs version
-    - error
-    - ignorePackages
-    - js: always
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+# rules:
+#   no-console: 0
+#   import/extensions: # FIXME: remove when rule will be adjusted for new nodejs version
+#     - error
+#     - ignorePackages
+#     - js: always
+#   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
