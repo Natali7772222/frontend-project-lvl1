@@ -4,5 +4,5 @@
 
 <!-- <script src="https://asciinema.org/a/14.js" id="asciicast-14" async data-autoplay="true" data-size="big"></script> -->
 
-<script id="asciicast-rAtcjqMJYMh0yVgHYsezXgC08" src="https://asciinema.org/a/rAtcjqMJYMh0yVgHYsezXgC08.js" async data-autoplay="true" data-size="big"></script>
+<script src="https://asciinema.org/a/rAtcjqMJYMh0yVgHYsezXgC08.js" id="asciicast-rAtcjqMJYMh0yVgHYsezXgC08"  async data-autoplay="true" data-size="big"></script>
 <!-- <a href="https://asciinema.org/a/rAtcjqMJYMh0yVgHYsezXgC08" target="_blank"><img src="https://asciinema.org/a/rAtcjqMJYMh0yVgHYsezXgC08.svg" /></a> -->
