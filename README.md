@@ -3,4 +3,4 @@
 <a href="https://codeclimate.com/github/Natali7772222/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/f7375cd585fb7adc3218/maintainability" /></a>
 
 
-<a autoplay=1 href="https://asciinema.org/a/yy5uHVDgwzPAR24ljtOQ0ZMub" target="_blank"><img src="https://asciinema.org/a/yy5uHVDgwzPAR24ljtOQ0ZMub.svg" /></a>
+<script id="asciicast-yy5uHVDgwzPAR24ljtOQ0ZMub" src="https://asciinema.org/a/yy5uHVDgwzPAR24ljtOQ0ZMub.js" async></script>
