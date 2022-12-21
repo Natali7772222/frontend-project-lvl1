@@ -5,7 +5,7 @@
 <a href="https://codeclimate.com/github/Natali7772222/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/f7375cd585fb7adc3218/maintainability" /></a>
 
 # Setting
-After cloning use make install command. The rest of the instructions are shown in gif👀⬇️
+After cloning use make install command. The rest of the instructions are shown in gif 👀  ⬇️
 
 
 ##  ✔️ Even Odd
