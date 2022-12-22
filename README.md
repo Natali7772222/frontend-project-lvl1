@@ -22,3 +22,6 @@ After cloning use make install command. The rest of the instructions are shown i
 
 ##  ✔️ Progression 
 ![progression](https://user-images.githubusercontent.com/110131934/209019323-9d6d301a-c129-46c6-806a-780a437c5511.gif)
+
+##  ✔️ Prime number
+![Без названия](https://user-images.githubusercontent.com/110131934/209243016-01f4dbb4-68e1-4808-828b-8cc0d4f540fb.gif)
