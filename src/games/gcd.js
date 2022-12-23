@@ -12,7 +12,7 @@ const euclid = (num1, num2) => {
 const getQuestionAndAnswer = () => {
   const num1 = randomNumber() * 3;
   const num2 = randomNumber() * 5;
-  const question = `${num1}  ${num2}`;
+  const question = `${num1} ${num2}`;
   const correctAnswer = euclid(num1, num2);
   return [question, correctAnswer];
 };
