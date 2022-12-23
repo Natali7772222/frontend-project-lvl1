@@ -29,7 +29,7 @@ const getQuestionAndAnswer = () => {
     }
   }
 
-  return [resArr, correctAnswer];
+  return [resArr.join(' '), correctAnswer];
 };
 
 export default () => {
