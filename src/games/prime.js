@@ -1,23 +1,21 @@
-import run from "../index.js";
-import randomNumber from "../helper.js";
+import run from '../index.js';
+import randomNumber from '../helper.js';
 
-const description = `Answer "yes" if given number is prime. Otherwise answer "no".`
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const primeNumb = (num) => {
-
-    for (let i = 2; i < num; i++) {
-        if (num % i == 0) {
-            return "no";
-        }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return 'no';
     }
-    return "yes";
-
-}
+  }
+  return 'yes';
+};
 const getQuestionAndAnswer = () => {
-    const question = randomNumber()
-    const correctAnswer = primeNumb(question)
-    return [question, correctAnswer]
-}
+  const question = randomNumber();
+  const correctAnswer = primeNumb(question);
+  return [question, correctAnswer];
+};
 export default () => {
-    run(description, getQuestionAndAnswer);
+  run(description, getQuestionAndAnswer);
 };

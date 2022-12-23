@@ -1,27 +1,21 @@
-import run from '../index.js'
-import randomNumber from '../helper.js'
+import run from '../index.js';
+import randomNumber from '../helper.js';
 
-const description = `Find the greatest common divisor of given numbers.`
+const description = 'Find the greatest common divisor of given numbers.';
 
-const euclid = (num1, num2)=>{
-    const remainder = num1 % num2;
-    if(remainder == 0){
-        return num2;
-   
-    }else{
-        num1 = num2;
-        num2 = remainder;
-       return euclid(num1, num2);
-    }
-}
+const euclid = (num1, num2) => {
+  const a = Math.abs(num1);
+  const b = Math.abs(num2);
+  return (b === 0) ? a : euclid(b, a % b);
+};
+
 const getQuestionAndAnswer = () => {
-    let num1 = randomNumber()*3;
-    let num2 = randomNumber()*5;
-    const question = `${num1}  ${num2}`;
-    const correctAnswer = euclid(num1,num2)
-    return [question, correctAnswer]
-}
-// console.log(getQuestionAndAnswer())
+  const num1 = randomNumber() * 3;
+  const num2 = randomNumber() * 5;
+  const question = `${num1}  ${num2}`;
+  const correctAnswer = euclid(num1, num2);
+  return [question, correctAnswer];
+};
 export default () => {
-    run(description, getQuestionAndAnswer)
-}
+  run(description, getQuestionAndAnswer);
+};
