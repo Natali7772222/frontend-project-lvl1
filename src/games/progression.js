@@ -11,7 +11,7 @@ const getQuestionAndAnswer = () => {
   // случайное число
   const num = randomNumber();
   // массив случайной длины от 5 до 10
-  const arr = Array(randomMinAndMax(5, 10)).fill(1);
+  const arr = Array(randomMinAndMax(6, 10)).fill(1);
   // изменненый массив
   const resArr = [];
 
