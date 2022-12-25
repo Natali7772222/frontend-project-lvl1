@@ -10,7 +10,9 @@ const run = (description, getQuestionAndAnswer) => {
   console.log(description);
 
   // запускаем цикл раундов
-  for (let i = 0; i < 3; i += 1) {
+  const countRound = 3;
+
+  for (let i = 0; i < countRound; i += 1) {
   // принимаем деструктуризацию вопроса и правильного ответа
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
