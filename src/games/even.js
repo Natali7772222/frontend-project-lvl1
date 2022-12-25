@@ -1,5 +1,5 @@
 import run from '../index.js';
-import randomNumber from '../helper.js';
+import random from '../helper.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -9,6 +9,7 @@ function isEvenNumber(num) {
   }
   return false;
 }
+const [randomNumber] = random();
 
 function getQuestionAndAnswer() {
   const question = randomNumber(0, 100);
