@@ -1,5 +1,5 @@
 import run from '../index.js';
-import randomNumber from '../helper.js';
+import random from '../helper.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -10,6 +10,7 @@ const getGcd = (num1, num2) => {
 };
 
 const getQuestionAndAnswer = () => {
+  const [randomNumber] = random();
   const num1 = randomNumber() * 3;
   const num2 = randomNumber() * 5;
   const question = `${num1} ${num2}`;
