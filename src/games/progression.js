@@ -1,9 +1,7 @@
-import random from '../helper.js';
+import randomMinAndMax from '../helper.js';
 import run from '../index.js';
 
 const description = 'What number is missing in the progression?';
-
-const [randomNumber, randomMinAndMax] = random();
 
 const arr = Array(randomMinAndMax(6, 11)).fill(1);
 
@@ -11,7 +9,7 @@ const randomArr = () => {
   // изменненый массив
   const resArr = [];
 
-  const num = randomNumber();
+  const num = randomMinAndMax(1, 100);
 
   for (let i = 1; i < arr.length; i += 1) {
     resArr.push(i * num);

@@ -1,18 +1,17 @@
 import run from '../index.js';
-import random from '../helper.js';
+import randomMinAndMax from '../helper.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEvenNumber(num) {
-  if (num % 2 === 0) {
+function isEvenNumber(number) {
+  if (number % 2 === 0) {
     return true;
   }
   return false;
 }
-const [randomNumber] = random();
 
 function getQuestionAndAnswer() {
-  const question = randomNumber(0, 100);
+  const question = randomMinAndMax(1, 100);
   const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
